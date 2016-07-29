@@ -1,0 +1,72 @@
+<!--
+  Generated template for the JsonSyntaxePage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-navbar *navbar>
+  <ion-title>La syntaxe JSON</ion-title>
+  <ion-buttons end>
+    <button royal (click)="openUrl('http://www.json.org/jsonfr.html')">
+      <ion-icon name="help-circle"></ion-icon>
+    </button>
+  </ion-buttons>
+</ion-navbar>
+
+<ion-content padding class="json-syntaxe">
+  <ion-slides #slideSyntaxe pager zoom>
+    <ion-slide text-left>
+      <ion-toolbar>
+        Liens utiles
+        <ion-buttons end>
+          <button (click)="slideNext()">Suiv.</button>
+        </ion-buttons>
+      </ion-toolbar>
+      <ion-card *ngFor=" let key of links | keys">
+        <ion-card-header text-left>{{key.key}}</ion-card-header>
+        <ion-list>
+          <ion-item *ngFor="let item of key.value" (click)="openUrl(item.link)">{{item.title}} ({{item.lang}})
+            <button clear item-right>Voir</button>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-toolbar>
+        Pratiquer la syntaxe JSON
+        <ion-buttons end>
+          <button secondary (click)="render()"><ion-icon name="refresh-circle"></ion-icon></button>
+          <button (click)="slidePrev()">Préc.</button>
+          <button (click)="slideNext()">Suiv.</button>
+        </ion-buttons>
+      </ion-toolbar>
+      <ion-item>
+        <ion-label floating>Cas à etudier</ion-label>
+        <ion-select [(ngModel)]="selFic" cancelText="Annuler" okText="Ok" (ngModelChange)="changeFic($event)">
+          <ion-option value="">== Choisir un cas ==</ion-option>
+          <ion-option *ngFor="let b of listDemo" [value]="b">{{b.title}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Vous pouvez modififer ces données au format JSON - {{live.length}} car.</ion-label>
+        <ion-textarea cols="30" rows="4" [ngModel]="live" (ngModelChange)="valuechange($event)" [style.background-color]="checkColor"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <div class="jsonFormat" #result>
+          <ng-content></ng-content>
+        </div>
+      </ion-item>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-toolbar>
+        Chantier en cours...
+        <ion-buttons end>
+          <button (click)="slidePrev()">Préc.</button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>

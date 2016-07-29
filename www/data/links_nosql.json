@@ -1,0 +1,26 @@
+[
+    {
+        "group": "E-Learning Web",
+        "title": "Concept NOSQL",
+        "link": "http://bigdatauniversity.com/courses/introduction-to-nosql-and-dbaas/",
+        "lang": "Anglais"
+    },
+    {
+        "group": "Documentation des outils",
+        "title": "Api CouchDB",
+        "link": "http://docs.couchdb.org/",
+        "lang": "Anglais"
+    },
+    {
+        "group": "Documentation des outils",
+        "title": "Le Guide CouchDB",
+        "link": "http://guide.couchdb.org/editions/1/fr/index.html",
+        "lang": "Français"
+    },
+    {
+        "group": "Documentation des outils",
+        "title": "Comment faire une sauvegarde CoucDB",
+        "link": "http://wiki.apache.org/couchdb/How_to_make_filesystem_backups",
+        "lang": "Anglais"
+    }
+]

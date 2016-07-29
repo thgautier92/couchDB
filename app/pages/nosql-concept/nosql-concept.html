@@ -1,0 +1,117 @@
+<!--
+  Generated template for the NosqlConceptPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-navbar *navbar>
+  <ion-title>Les concepts NoSQL</ion-title>
+</ion-navbar>
+
+<ion-content padding class="nosql-concept">
+  <ion-slides #slideNosql pager zoom>
+    <ion-slide text-left>
+      <ion-toolbar>
+        Concepts de base
+        <ion-buttons end>
+          <button (click)="slideNext()">Suiv.</button>
+        </ion-buttons>
+      </ion-toolbar>
+      <div text-justify class="xsmall">
+        <p text-wrap>
+          Les bases de données NOSQL stockent une collection de "documents" :
+          <br>• elles sont basées sur le modèle « clé-valeur » mais la valeur est un document en format semi-structuré hiérarchique
+          de type JSON ou XML (possible aussi de stocker n'importe quel objet, via une sérialisation)
+          <br><br>• les documents n'ont pas de schéma, mais une structure arborescente : ils contiennent une liste de champs,
+          un champ a une valeur qui peut être une liste de champs, ...
+          <br><br>• elles ont généralement une interface d’accès HTTP REST permettant d’effectuer des requêtes (plus complexe
+          que l’interface CRUD des BD clés/valeurs)
+          <br><br>• Implémentations les plus connues :
+          <br>   - CouchDB (fondation Apache)
+          <br>   - RavenDB (pour plateformes « .NET/Windows » - LINQ)
+          <br>   - MongoDB, Terrastore, …
+        </p>
+      </div>
+      <button (click)="slideNext()">Demarrer...</button>
+    </ion-slide>
+
+    <ion-slide text-left>
+      <ion-toolbar>
+        Créer et manipuler sa base NoSql
+        <ion-buttons end>
+          <button secondary (click)="createBase()"><ion-icon name="refresh-circle"></ion-icon>Créer...</button>
+          <button (click)="slidePrev()">Préc.</button>
+          <button (click)="slideNext()">Suiv.</button>
+        </ion-buttons>
+      </ion-toolbar>
+      <ion-card *ngIf="consult.base">
+        <ion-card-header text-left>Votre base : {{dbInfo.db_name}} - {{dbInfo.doc_count}} enr.</ion-card-header>
+        <ion-card-content>
+          <ion-grid>
+            <ion-row wrap>
+              <ion-col width-30>
+                <ion-select [(ngModel)]="consult.range" cancelText="Annuler" okText="Ok">
+                  <ion-option *ngFor="let r of listRange" [value]="r.opt">{{r.lib}} enr. par page</ion-option>
+                </ion-select>
+              </ion-col>
+              <ion-col width-70>
+                <ion-buttons>
+                  <button royal (click)="getDocs()">{{docsItems.offset}}/{{docsItems.total_rows}}</button>
+                  <button royal (click)="gotoStart()"><ion-icon name="skip-backward"></ion-icon></button>
+                  <button royal (click)="getDocs()"><ion-icon name="play"></ion-icon></button>
+                  <button royal (click)="addDocs()"><ion-icon name="add"></ion-icon></button>
+                </ion-buttons>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+      <ion-card *ngIf="consult.base">
+        <ion-card-content>
+          <!-- <ion-searchbar [(ngModel)]="searchQuery" (input)="getDocs($event)"></ion-searchbar> -->
+          <ion-grid>
+            <ion-row wrap>
+              <ion-col width-20>
+                <ion-list>
+                  <button ion-item *ngFor="let item of docsItems.rows" (click)="getDocId(item.id)"> _id : {{item.id}}</button>
+                </ion-list>
+              </ion-col>
+              <ion-col width-80>
+                <record [dataRecord]='doc'></record>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+    <ion-slide text-left>
+      <ion-toolbar>
+        Liens utiles
+        <ion-buttons end>
+          <button (click)="slidePrev()">Préc.</button>
+          <button (click)="slideNext()">Suiv.</button>
+        </ion-buttons>
+      </ion-toolbar>
+      <button (click)="slideNext()">Demarrer...</button>
+      <ion-card *ngFor=" let key of links | keys">
+        <ion-card-header text-left>{{key.key}}</ion-card-header>
+        <ion-list>
+          <ion-item *ngFor="let item of key.value" (click)="openUrl(item.link)">{{item.title}} ({{item.lang}})
+            <button clear item-right>Voir</button>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide text-left>
+      <ion-toolbar>
+        Chantier en cours...
+        <ion-buttons end>
+          <button (click)="slidePrev()">Préc.</button>
+        </ion-buttons>
+      </ion-toolbar>
+
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>

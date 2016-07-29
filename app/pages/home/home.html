@@ -1,0 +1,25 @@
+<ion-navbar *navbar primary>
+  <ion-title>Bienvenue {{user.name}}</ion-title>
+  <ion-buttons end>
+    <button royal (click)="logout()"><ion-icon name="log-out"></ion-icon></button>
+  </ion-buttons>
+</ion-navbar>
+
+<ion-content padding class="home">
+  <div class="logo"><img src="img/logosma_accueil.png"></div>
+
+  <h2>Bienvenue sur le cours <b>NoSQL Learning</b>!</h2>
+  <p>
+    Cette application sert de support à la formation équipes SMA sur la conception de structures de données JSON stockées dans
+    une base NOSQL.
+    <br><br>L'outil de stockage serveur est <b>C</b>ouchDB et son équivalent,sur le poste client, <b>P</b>ouchDB, pour les
+    besoins de formation.
+  </p>
+
+
+  <ion-toolbar position="bottom">
+    <p text-center>&copy; Groupe SMA - DSI/SMA Labs<br>R&D sur la gestion des bases NOSQL<br>Juillet 2016</p>
+  </ion-toolbar>
+
+
+</ion-content>

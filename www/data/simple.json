@@ -1,0 +1,17 @@
+{
+    "demo": "Syntaxe simple",
+    "data": {
+        "text": "ceci est du texte",
+        "number": 100,
+        "array": [
+            {
+                "code": 1,
+                "valeur": 1
+            },
+            {
+                "code": 2,
+                "valeur": 2
+            }
+        ]
+    }
+}

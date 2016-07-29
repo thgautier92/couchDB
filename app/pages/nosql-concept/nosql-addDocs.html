@@ -1,0 +1,13 @@
+<ion-content padding>
+    <h2>Ajout d'une structure JSON</h2>
+    <ion-item>
+        <ion-label floating>identifiant unique</ion-label>
+        <ion-input type="text" [(ngModel)]="idDoc"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>Vous pouvez modififer ces données au format JSON - {{jsonData.length}} car.</ion-label>
+        <ion-textarea cols="30" rows="4" [(ngModel)]="jsonData" (ngModelChange)="valuechange($event)" [style.background-color]="checkColor"></ion-textarea>
+    </ion-item>
+    <button (click)="close()">Fermer</button>
+    <button (click)="add()">Ajouter</button>
+</ion-content>

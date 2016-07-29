@@ -1,0 +1,38 @@
+[
+    {
+        "group": "Spécifications",
+        "title": "La syntaxe JSON",
+        "link": "http://www.json.org/jsonfr.html",
+        "lang": "Français"
+    },
+    {
+        "group": "Spécifications",
+        "title": "Wikipedia",
+        "link": "https://fr.wikipedia.org/wiki/JavaScript_Object_Notation",
+        "lang": "Français"
+    },
+    {
+        "group": "Spécifications",
+        "title": "La norme RFC 7159",
+        "link": "http://rfc7159.net/rfc7159",
+        "lang": "Anglais"
+    },
+    {
+        "group": "Spécifications",
+        "title": "La norme Ecma-262",
+        "link": "http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf",
+        "lang": "Anglais"
+    },
+    {
+        "group": "Visualiseur",
+        "title": "Chrome",
+        "link": "http://jsonplaceholder.typicode.com/posts",
+        "lang": "Français"
+    },
+    {
+        "group": "Editeurs",
+        "title": "Visual Code",
+        "link": "https://www.visualstudio.com/fr-fr/products/code-vs.aspx",
+        "lang": "Français"
+    }
+]

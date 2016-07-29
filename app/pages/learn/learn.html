@@ -1,0 +1,30 @@
+<ion-navbar *navbar>
+  <ion-title>
+    La conception NOSQL
+  </ion-title>
+</ion-navbar>
+
+<ion-content padding class="about">
+  <h1>Le format JSON</h1>
+  <ion-list>
+    <ion-item text-wrap *ngFor="let item of itemsJson" (click)="startLearn(item)">
+      <ion-thumbnail item-left>
+        <img src="img/{{item.img}}">
+      </ion-thumbnail>
+      <h2>{{item.title}}</h2>
+      <p>{{item.des}}</p>
+      <button clear item-right>Voir</button>
+    </ion-item>
+  </ion-list>
+  <h1>La base NOSQL</h1>
+  <ion-list>
+    <ion-item text-wrap *ngFor="let item of itemsCouch" (click)="startLearn(item)">
+      <ion-thumbnail item-left>
+        <img src="img/{{item.img}}">
+      </ion-thumbnail>
+      <h2>{{item.title}}</h2>
+      <p>{{item.des}}</p>
+      <button clear item-right>Voir</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

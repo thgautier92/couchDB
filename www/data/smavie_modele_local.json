@@ -1,0 +1,50 @@
+{
+  "_id": "406",
+  "_rev": "81-5c0c95bcb711cd60b1ef3ff1e1e5666b",
+  "clients": [],
+  "rdv": {
+    "REF": "361169",
+    "rdvId": "406",
+    "dateRdv": "2016-07-22 11:57:14",
+    "NOM": "SOLETANCHE FREYSSINET",
+    "CODEPOSTAL": "92504",
+    "VILLE": "RUEIL MALMAISON CEDEX",
+    "TELEPHONE": "0147764262",
+    "EMAIL": "",
+    "SIREN": "562134544",
+    "SIRET": "00112",
+    "ETATIARD": "PROSPECT",
+    "ETATVIE": "SOCIETAIRE",
+    "USERID": "A10352",
+    "resultByClient": [
+      {
+        "clientId": "361169",
+        "clientName": "SOLETANCHE FREYSSINET",
+        "clientPrenom": "null",
+        "etatVie": "SOCIETAIRE",
+        "forms": [],
+        "docs": [],
+        "rdvStatus": false
+      },
+      {},
+      {
+        "clientId": "126498",
+        "clientName": "CONGES INTEMPERIES BTP CAISSE EURE ET EURE ET LOIRE",
+        "clientPrenom": "null",
+        "etatVie": "SOCIETAIRE",
+        "forms": [],
+        "docs": [],
+        "rdvStatus": false
+      },
+      {
+        "clientId": "372699",
+        "clientName": "TALON",
+        "clientPrenom": "FRANCOIS",
+        "etatVie": "SOCIETAIRE",
+        "forms": [],
+        "docs": [],
+        "rdvStatus": false
+      }
+    ]
+  }
+}

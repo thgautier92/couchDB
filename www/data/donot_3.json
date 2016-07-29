@@ -1,0 +1,17 @@
+{
+    "explain": "Dans ce cas il est préférable de regrouper les commentaires par utilisateurs et donc créer un niveau intermediaire, en dessous de review",
+    "data": {
+        "title": "Le seigneur des anneaux",
+        "note": 4,
+        "reviews": [
+            {
+                "username": "John doe",
+                "content": "Pourquoi ne pas avoir utilisé l'aigle ?"
+            },
+            {
+                "username": "John doe",
+                "content": "Mon précieux !"
+            }
+        ]
+    }
+}
